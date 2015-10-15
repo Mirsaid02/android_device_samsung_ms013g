@@ -747,6 +747,9 @@ service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw
     class late_start
     disabled
 
+on property:wifi.change_nv_owner=1
+    chown wifi wifi /persist/WCNSS_qcom_wlan_nv.bin
+
 # SSR
 on property:persist.sys.ssr.restart_level=*
     exec /system/bin/sh /init.qcom.ssr.sh ${persist.sys.ssr.restart_level}
