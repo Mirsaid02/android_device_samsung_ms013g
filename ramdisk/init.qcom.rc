@@ -751,6 +751,9 @@ service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw
 on property:persist.sys.ssr.restart_level=*
     exec /system/bin/sh /init.qcom.ssr.sh ${persist.sys.ssr.restart_level}
 
+on property:radio.atfwd.start=false
+    stop atfwd
+
 service thermal-engine /system/bin/thermal-engine -c /etc/thermal-engine-8226.conf
     class main
     user root
