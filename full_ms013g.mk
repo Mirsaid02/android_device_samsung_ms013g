@@ -18,7 +18,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from falcon device
-$(call inherit-product, device/motorola/falcon/device_ms013g.mk)
+$(call inherit-product, device/samsung/ms013g/device_ms013g.mk)
 
 # Inherit some common AOSParadox stuff.
 $(call inherit-product, vendor/aosparadox/common.mk)
