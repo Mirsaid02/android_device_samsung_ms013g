@@ -52,5 +52,5 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
